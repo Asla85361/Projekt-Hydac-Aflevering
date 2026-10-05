@@ -19,22 +19,7 @@ namespace Project_Hydac_Final
             _dataFileName = dataFileName;
         }
 
-        public void SaveVisits(Visit[] visits)
-        {
-            StreamWriter sw = new StreamWriter(DataFileName);
 
-            foreach (Visit visit in visits)
-            {
-                sw.WriteLine(visit.VisitNumber + ";" +
-                            visit.Guest.Name + ";" +
-                            visit.Guest.Company + ";" +
-                            visit.ResponsiblePerson.Name + ";" +
-                            visit.Room.Name + ";" +
-                            visit.Arrival);
-            }
-
-            sw.Close();
-        }
 
         public Visit[] LoadVisits()
         {
@@ -99,6 +84,23 @@ namespace Project_Hydac_Final
             sr.Close();
 
             return visits;
+        }
+
+        public void SaveVisits(Visit[] visits)
+        {
+            StreamWriter sw = new StreamWriter(DataFileName);
+
+            foreach (Visit visit in visits)
+            {
+                sw.WriteLine(visit.VisitNumber + ";" +
+                            visit.Guest.Name + ";" +
+                            visit.Guest.Company + ";" +
+                            visit.ResponsiblePerson.Name + ";" +
+                            visit.Room.Name + ";" +
+                            visit.Arrival);
+            }
+
+            sw.Close();
         }
     }
 }

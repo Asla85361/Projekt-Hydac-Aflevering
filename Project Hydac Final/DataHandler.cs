@@ -38,6 +38,11 @@ namespace Project_Hydac_Final
 
         public Visit[] LoadVisits()
         {
+            if (!File.Exists(DataFileName))
+            {
+                return new Visit[0];
+            }
+
             StreamReader sr = new StreamReader(DataFileName);
 
             int numberOfVisits = 0;

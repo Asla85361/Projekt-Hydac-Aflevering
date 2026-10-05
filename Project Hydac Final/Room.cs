@@ -12,15 +12,5 @@ namespace Project_Hydac_Final
         {
             Name = name;
         }
-
-        public void Reserve()
-        {
-            Console.WriteLine("Room " + Name + " is reserved.");
-        }
-
-        public void Release()
-        {
-            Console.WriteLine("Room " + Name + " is released.");
-        }
     }
 }

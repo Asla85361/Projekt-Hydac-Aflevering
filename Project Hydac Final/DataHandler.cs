@@ -38,9 +38,9 @@ namespace Project_Hydac_Final
 
         public Visit[] LoadVisits()
         {
-            if (!File.Exists(DataFileName))
+            if (!File.Exists(DataFileName))     //Hvis filen visits.txt ikke findes endnu,
             {
-                return new Visit[0];
+                return new Visit[0];                //returneres et tomt array af besøg.
             }
 
             StreamReader sr = new StreamReader(DataFileName);

@@ -8,7 +8,7 @@ namespace Project_Hydac_Final
         {
             DataHandler dataHandler = new DataHandler("visits.txt");
 
-            bool running = true;
+            bool running = true; 
 
             Visit[] visits = dataHandler.LoadVisits();
             int nextVisitNumber = 1;
@@ -57,31 +57,31 @@ namespace Project_Hydac_Final
 
 
                     Console.Write("Vælg: ");
-                    string responsibleChoice = Console.ReadLine();
+                    string resChoice = Console.ReadLine();
 
-                    ResponsiblePerson responsiblePerson;
+                    ResponsiblePerson resPerson;
 
-                    switch (responsibleChoice)
+                    switch (resChoice)
                     {
                         case "1":
-                            responsiblePerson = new ResponsiblePerson("Rene Hansen");
+                            resPerson = new ResponsiblePerson("Rene Hansen");
                             break;
 
                         case "2":
-                            responsiblePerson = new ResponsiblePerson("Daniel Rasmussen");
+                            resPerson = new ResponsiblePerson("Daniel Rasmussen");
                             break;
 
                         case "3":
-                            responsiblePerson = new ResponsiblePerson("Kasper Nielsen");
+                            resPerson = new ResponsiblePerson("Kasper Nielsen");
                             break;
 
                         case "4":
-                            responsiblePerson = new ResponsiblePerson("Daniel Sørensen");
+                            resPerson = new ResponsiblePerson("Daniel Sørensen");
                             break;
 
                         default:
-                            responsiblePerson = new ResponsiblePerson("Rene Hansen");
-                            break;
+                            Console.WriteLine("Ugyldigt valg.");
+                            return;
                     }
 
                     // Room
@@ -118,8 +118,8 @@ namespace Project_Hydac_Final
                             break;
 
                         default:
-                            room = new Room("LGS_Lokale_lille_Stue");
-                            break;
+                            Console.WriteLine("Ugyldigt valg.");
+                            return;
                     }
 
 
@@ -127,7 +127,7 @@ namespace Project_Hydac_Final
 
                     Visit visit = new Visit(nextVisitNumber,
                                             guest,
-                                            responsiblePerson,
+                                            resPerson,
                                             room);
                     Visit[] newVisits = new Visit[visits.Length + 1];
 
@@ -140,12 +140,6 @@ namespace Project_Hydac_Final
 
                     visits = newVisits;
 
-
-                    // Reserve room
-
-                    room.Reserve();
-
-
                     // Save visit
 
                     dataHandler.SaveVisits(visits);
@@ -153,7 +147,7 @@ namespace Project_Hydac_Final
 
                     // Notification
 
-                    responsiblePerson.SendNotification();
+                    resPerson.SendNotification();
 
 
                     // Confirmation

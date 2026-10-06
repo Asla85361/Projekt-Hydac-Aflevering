@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Project_Hydac_Final
 {
-    internal class ResponsiblePerson
+   public class ResponsiblePerson
     {
         public string Name { get; set; }
 

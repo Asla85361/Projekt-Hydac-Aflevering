@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="Project Hydac Final/Project Hydac Final.csproj" />
+  <Project Path="TestProjectHydac/TestProjectHydac.csproj" Id="99810e3c-7f6e-428c-9f5a-bee943fe370c" />
 </Solution>

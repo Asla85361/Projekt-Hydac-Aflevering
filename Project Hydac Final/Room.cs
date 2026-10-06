@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Project_Hydac_Final
 {
-    internal class Room
+    public class Room
     {
         public string Name { get; set; }
 

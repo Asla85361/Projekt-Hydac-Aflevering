@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Project_Hydac_Final
 {
-    internal class Visit
+    public class Visit
     {
         public int VisitNumber { get; set; }
 

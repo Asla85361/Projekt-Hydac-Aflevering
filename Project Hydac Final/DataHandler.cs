@@ -5,7 +5,7 @@ using System.IO;
 
 namespace Project_Hydac_Final
 {
-    internal class DataHandler
+    public class DataHandler
     {
         private string _dataFileName;
 

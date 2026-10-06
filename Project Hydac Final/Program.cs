@@ -2,7 +2,7 @@
 
 namespace Project_Hydac_Final
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {

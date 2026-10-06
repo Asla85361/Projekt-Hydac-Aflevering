@@ -5,7 +5,7 @@ using System.Xml.Linq;
 
 namespace Project_Hydac_Final
 {
-    internal class Guest
+    public class Guest
     {
         public string Name { get; set; }
         public string Company { get; set; }
